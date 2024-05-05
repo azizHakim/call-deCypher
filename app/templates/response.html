@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Response</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    .response-list {
+      font-size: 18px; /* Adjust the font size as needed */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-5">Facts From the Call Logs</h1>
+    <h3 class="mt-4">Question: {{ question }}</h3>
+    <h3 class="mt-4">Response: </h3>
+    <ul id="response-list" class="mt-2 response-list"> <!-- Add the response-list class here -->
+      <!-- List items will be added here using Jinja templating -->
+      {% for response in responses %}
+        <li>{{ response }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

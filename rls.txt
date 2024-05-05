@@ -1,0 +1,3 @@
+https://storage.googleapis.com/cis-658-hw4.appspot.com/call-log1.txt
+https://storage.googleapis.com/cis-658-hw4.appspot.com/call-log2.txt
+https://storage.googleapis.com/cis-658-hw4.appspot.com/call-log3.txt

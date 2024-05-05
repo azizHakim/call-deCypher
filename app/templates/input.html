@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Call Decypher: Powered by GPT-4 and RAG</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-5">Call Decypher: Powered by GPT-4 and RAG</h1>
+    <form action="/response" method="post" class="mt-4">
+      <div class="form-group">
+        <label for="question">Question</label>
+        <input type="text" class="form-control" id="question" name="question" required>
+      </div>
+      <div class="form-group" id="url-inputs">
+        <label for="url1">URL</label>
+        <input type="url" class="form-control" id="url1" name="url1" required>
+      </div>
+      <button type="button" class="btn btn-secondary mb-3" onclick="addUrlInput()">Add More</button>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    let urlCount = 1;
+    function addUrlInput() {
+      urlCount++;
+      const newInput = document.createElement('input');
+      newInput.setAttribute('type', 'url');
+      newInput.setAttribute('class', 'form-control mt-2');
+      newInput.setAttribute('id', 'url' + urlCount);
+      newInput.setAttribute('name', 'url' + urlCount);
+      newInput.setAttribute('required', true);
+      document.getElementById('url-inputs').appendChild(newInput);
+    }
+  </script>
+</body>
+</html>

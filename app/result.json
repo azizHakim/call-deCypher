@@ -1,0 +1,8 @@
+{
+    "question": "what are the product design decisions",
+    "facts": [
+        "The product will primarily focus on desktop users first.",
+        "The user interface will have both dark and light theme options."
+    ],
+    "status": "done"
+}
